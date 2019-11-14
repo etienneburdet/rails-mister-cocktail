@@ -1,9 +1,22 @@
 // Specific CSS for your home-page
-.wrapper {
-  display: block;
+.bl-fixed {
+  position:fixed;
+  bottom:2rem;
+  left:2rem;
 }
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  flex-grow: 1;
+
+.cocktail-card {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://loremflickr.com/300/300/cocktail);
+  background-size: cover;
+  filter: grayscale(80%);
+  &:hover {
+    filter: grayscale(0%);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(https://loremflickr.com/300/300/cocktail);
+
+  }
+  height: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
