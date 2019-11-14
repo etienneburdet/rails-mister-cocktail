@@ -8,7 +8,8 @@
 require 'open-uri'
 require 'json'
 
-puts "Reseting all ingredients"
+puts "Reseting seeds"
+Cocktail.destroy_all
 Ingredient.destroy_all
 
 ingredients_serial = open("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").read
@@ -20,5 +21,8 @@ ingredients["drinks"].each do |ingredient|
 end
 
 
-puts "Reseting all cocktails"
-Cocktail.destroy_all
+
+20.times do
+  new_cocktail = Cocktail.create!(name: Faker::Hipster.words(number: rand(1..3)).join(' '))
+  puts "Added #{new_cocktail.name}"
+end
