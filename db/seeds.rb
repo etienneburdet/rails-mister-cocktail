@@ -18,3 +18,7 @@ ingredients["drinks"].each do |ingredient|
   new_ingredient = Ingredient.create!(name: ingredient["strIngredient1"])
   puts "Added #{new_ingredient.name}"
 end
+
+
+puts "Reseting all cocktails"
+Cocktail.destroy_all
