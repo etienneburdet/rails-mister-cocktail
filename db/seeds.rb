@@ -23,6 +23,11 @@ end
 
 
 20.times do
+  file = URI.open('https://source.unsplash.com/600x600/?cocktail')
   new_cocktail = Cocktail.create!(name: Faker::Hipster.words(number: rand(1..3)).join(' '))
+  new_cocktail.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
+  # Here we write article.photo.attach(...) because we wrote has_one_attached :photo in app/models article.rb
+  new_cocktail.save
+
   puts "Added #{new_cocktail.name}"
 end

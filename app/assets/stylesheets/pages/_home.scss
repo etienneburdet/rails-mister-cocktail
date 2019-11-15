@@ -1,13 +1,11 @@
 // Specific CSS for your home-page
 
 .cocktail-card {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://loremflickr.com/300/300/cocktail);
   background-size: cover;
   filter: grayscale(80%);
   &:hover {
     filter: grayscale(0%);
-    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(https://loremflickr.com/300/300/cocktail);
-
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
   }
   height: 25vw;
   display: flex;
@@ -15,6 +13,8 @@
   align-items: center;
   color: #ffcc66;
 }
+
+
 
 .add-card {
   height: 25vw;
