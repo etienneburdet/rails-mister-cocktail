@@ -38,6 +38,24 @@
   .btn {
     color: #ffcc66;
   }
+  input {
+    border: none;
+    border-bottom: solid 1px;
+    box-shadow: none;
+    border-bottom: solid 1px;
+    background: transparent;
+    border-color: #fc6;
+    color: #fc6;
+    &:focus {
+      border: none;
+      border-bottom: solid 1px;
+      box-shadow: none;
+      border-bottom: solid 1px;
+      background: transparent;
+      border-color: #fc6;
+      color: #fc6;
+    }
+  }
 }
 
 // .sidebar {

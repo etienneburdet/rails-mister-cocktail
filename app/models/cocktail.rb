@@ -4,4 +4,5 @@ class Cocktail < ApplicationRecord
   has_one_attached :photo
 
   validates :name, presence: true, uniqueness: true, allow_blank: false
+  validates :photo, presence: true
 end

@@ -18,7 +18,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.create(cocktail_params)
-    redirect_to cocktails_url
+    redirect_to cocktail_url(@cocktail)
   end
 
   private
