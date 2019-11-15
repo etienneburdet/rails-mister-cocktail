@@ -1,18 +1,32 @@
-<h1> <%= @cocktail.name %></h1>
-<%= link_to "Back to list", cocktails_path %>
 
 <div class="container">
-  <ul>
-    <% @doses.each do |dose| %>
-    <li><%= dose.ingredient.name %> <%= dose.description %></li>
-    <% end %>
-  </ul>
-
-  <div>
-    <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.association :ingredient %>
-    <%= f.input :description %>
-    <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
+  <div class="row">
+    <div class="col-3 mt-5">
+      <%= link_to "<< Back to list", cocktails_path %>
+    </div>
+    <div class="col">
+    <div class="card d-flex rounded" style="width: 18rem;">
+      <%= cl_image_tag @cocktail.photo.key, class: 'card-img-top', crop: :fill %>
+      <div class="card-body text-center flex-fill">
+        <h5 class="card-title"><%= @cocktail.name %></h5>
+        <ul>
+          <% @doses.each do |dose| %>
+          <li><%= dose.ingredient.name %> <%= dose.description %></li>
+          <% end %>
+        </ul>
+        <a data-toggle="collapse" href="#collapseDoseForm" role="button" aria-expanded="false" aria-controls="collapseDoseForm">
+          + Add ingredient
+        </a>
+        <div class="collapse" id="collapseDoseForm">
+          <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.association :ingredient %>
+          <%= f.input :description %>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
 </div>
