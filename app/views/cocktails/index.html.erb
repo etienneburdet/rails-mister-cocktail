@@ -1,7 +1,21 @@
-<h1>Liste des cocktails</h1>
-
 <div class="container-fluid">
   <div class="row">
+    <!-- <nav class="col-sm-2 col-lg-3 d-md-block sidebar">
+      <h6>search</h6>
+      <h6>Add</h6>
+    </nav> -->
+    <div class="card col-sm-6 col-lg-3 flex-grow add-card">
+      <div class="add">
+        <button class="btn" id="add-cocktail">
+          <i class="fas fa-plus fa-2x" id="add-btn"></i>
+        </button>
+        <div id="cocktail-name" class="d-none">
+          <%= simple_form_for @cocktail do |f| %>
+            <%= f.input :name%>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <% @cocktails.each do |cocktail| %>
       <div class="card col-sm-6 col-lg-3 flex-grow cocktail-card">
         <h5 class="card-title"><%= cocktail.name %></h5>
@@ -9,6 +23,4 @@
       </div>
     <% end %>
   </div>
-
-  <%= link_to "+ Add", new_cocktail_path, class: 'btn btn-primary bl-fixed' %>
 </div>

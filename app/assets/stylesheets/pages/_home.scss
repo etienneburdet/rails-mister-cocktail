@@ -1,9 +1,4 @@
 // Specific CSS for your home-page
-.bl-fixed {
-  position:fixed;
-  bottom:2rem;
-  left:2rem;
-}
 
 .cocktail-card {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://loremflickr.com/300/300/cocktail);
@@ -18,5 +13,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffcc66;
 }
+
+.add-card {
+  height: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a1c01;
+}
+
+.add {
+  color: #ffcc66;
+  background: transparent;
+  border: dashed 1px;
+  border-radius: 0.2rem;
+  width: 100%;
+  height: 100%;
+  margin: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    color: #ffcc66;
+  }
+}
+
+// .sidebar {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 100;
+//   padding: 48px 0 0;
+//   background: #2a1c01;
+//   color:white;
+// }

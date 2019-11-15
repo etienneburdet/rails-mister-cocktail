@@ -17,3 +17,6 @@
 
 console.log('Hello World from Webpacker')
 import 'bootstrap';
+
+import { changeBtnToInput } from '../components/add-button.js'
+changeBtnToInput();
